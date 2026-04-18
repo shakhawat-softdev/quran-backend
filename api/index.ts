@@ -37,6 +37,15 @@ app.get("/", (c) => {
   });
 });
 
+// Debug endpoint
+app.get("/debug", (c) => {
+  return c.json({
+    method: c.req.method,
+    path: c.req.path,
+    headers: Object.fromEntries(c.req.raw.headers),
+  });
+});
+
 // API v1 routes
 app.route("/api/v1", quranRoutes);
 
@@ -68,6 +77,8 @@ export default async (req: any, res: any): Promise<void> => {
       (req.headers.host as string) ||
       "localhost";
     const url = new URL(req.url || "/", `${protocol}://${host}`);
+
+    console.log(`[${new Date().toISOString()}] ${req.method} ${url.pathname}`);
 
     const request = new Request(url.toString(), {
       method: req.method,
