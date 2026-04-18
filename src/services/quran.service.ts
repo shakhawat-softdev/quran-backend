@@ -6,7 +6,7 @@ import { dirname } from "path";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-interface InternalSurah {
+interface SurahMetadata {
   id: number;
   name: string;
   name_arabic: string;
@@ -23,11 +23,9 @@ interface Surah {
   revelationType: string;
 }
 
-interface InternalAyah {
-  surah_id: number;
-  ayah_number: number;
-  arabic_text: string;
+interface RawAyah {
   translation: string;
+  [key: string]: any;
 }
 
 interface Ayah {
@@ -38,49 +36,64 @@ interface Ayah {
   translation: string;
 }
 
-interface QuranData {
-  surahs: InternalSurah[];
-  ayahs: InternalAyah[];
+interface AllQuranData {
+  [surahNumber: string]: RawAyah[];
 }
 
-let quranData: QuranData | null = null;
+let quranDataAll: AllQuranData | null = null;
+let surahMetadata: SurahMetadata[] | null = null;
 let lastLoadTime = 0;
 
-const loadQuranData = (): QuranData => {
-  // Cache for 1 hour in production
-  const now = Date.now();
-  if (quranData && now - lastLoadTime < 3600000) {
-    return quranData;
+const loadSurahMetadata = (): SurahMetadata[] => {
+  if (surahMetadata) {
+    return surahMetadata;
   }
 
-  const dataPath = join(__dirname, "../data/quran-data.json");
+  const metadataPath = join(__dirname, "../data/quran-data.json");
+  const data = JSON.parse(readFileSync(metadataPath, "utf-8"));
+  surahMetadata = data.surahs || [];
+  return surahMetadata as SurahMetadata[];
+};
+
+const loadQuranDataAll = (): AllQuranData => {
+  // Cache for 1 hour in production
+  const now = Date.now();
+  if (quranDataAll && now - lastLoadTime < 3600000) {
+    return quranDataAll;
+  }
+
+  const dataPath = join(__dirname, "../data/quran-data-all.json");
   const data = JSON.parse(readFileSync(dataPath, "utf-8"));
-  quranData = data;
+  quranDataAll = data;
   lastLoadTime = now;
   return data;
 };
 
 /**
- * Transform internal surah format to API format
+ * Transform surah metadata to API format
  */
-const transformSurah = (internalSurah: InternalSurah): Surah => ({
-  number: internalSurah.id,
-  name: internalSurah.name_arabic,
-  englishName: internalSurah.name,
-  englishNameTranslation: internalSurah.name,
-  numberOfAyahs: internalSurah.total_ayahs,
-  revelationType: internalSurah.revelation_type,
+const transformSurah = (metadata: SurahMetadata): Surah => ({
+  number: metadata.id,
+  name: metadata.name_arabic,
+  englishName: metadata.name,
+  englishNameTranslation: metadata.name,
+  numberOfAyahs: metadata.total_ayahs,
+  revelationType: metadata.revelation_type,
 });
 
 /**
- * Transform internal ayah format to API format
+ * Transform raw ayah to API format
  */
-const transformAyah = (internalAyah: InternalAyah): Ayah => ({
-  number: internalAyah.ayah_number,
-  surah: internalAyah.surah_id,
-  numberInSurah: internalAyah.ayah_number,
-  text: internalAyah.arabic_text,
-  translation: internalAyah.translation,
+const transformAyah = (
+  surahId: number,
+  ayahNumber: number,
+  rawAyah: RawAyah,
+): Ayah => ({
+  number: ayahNumber,
+  surah: surahId,
+  numberInSurah: ayahNumber,
+  text: rawAyah.arabic_text || "",
+  translation: rawAyah.translation,
 });
 
 export const QuranService = {
@@ -88,27 +101,29 @@ export const QuranService = {
    * Get all surahs
    */
   getAllSurahs: (): Surah[] => {
-    const data = loadQuranData();
-    return data.surahs.map(transformSurah);
+    const metadata = loadSurahMetadata();
+    return metadata.map(transformSurah);
   },
 
   /**
    * Get a specific surah with all its ayahs
    */
   getSurah: (surahId: number): (Surah & { ayahs: Ayah[] }) | null => {
-    const data = loadQuranData();
-    const surah = data.surahs.find((s) => s.id === surahId);
+    const metadata = loadSurahMetadata();
+    const data = loadQuranDataAll();
 
-    if (!surah) {
+    const surahMeta = metadata.find((s) => s.id === surahId);
+    if (!surahMeta) {
       return null;
     }
 
-    const ayahs = data.ayahs
-      .filter((a) => a.surah_id === surahId)
-      .map(transformAyah);
+    const rawAyahs = data[surahId.toString()] || [];
+    const ayahs = rawAyahs.map((rawAyah, index) =>
+      transformAyah(surahId, index + 1, rawAyah),
+    );
 
     return {
-      ...transformSurah(surah),
+      ...transformSurah(surahMeta),
       ayahs,
     };
   },
@@ -131,32 +146,41 @@ export const QuranService = {
     total_pages: number;
     limit: number;
   } => {
-    const data = loadQuranData();
+    const metadata = loadSurahMetadata();
+    const data = loadQuranDataAll();
     const lowerQuery = query.toLowerCase();
 
-    // Filter ayahs matching the search query
-    const matchedAyahs = data.ayahs.filter((ayah) =>
-      ayah.translation.toLowerCase().includes(lowerQuery),
-    );
+    // Collect all matching ayahs
+    const matchedAyahs: (Ayah & {
+      surahNumber: number;
+      surahName: string;
+      surahEnglishName: string;
+    })[] = [];
 
-    // Enrich with surah information
-    const enrichedResults = matchedAyahs.map((ayah) => {
-      const surah = data.surahs.find((s) => s.id === ayah.surah_id);
-      return {
-        ...transformAyah(ayah),
-        surahNumber: surah?.id || 0,
-        surahName: surah?.name_arabic || "Unknown",
-        surahEnglishName: surah?.name || "Unknown",
-      };
+    Object.entries(data).forEach(([surahIdStr, ayahs]) => {
+      const surahId = parseInt(surahIdStr);
+      const surahMeta = metadata.find((s) => s.id === surahId);
+
+      ayahs.forEach((rawAyah, index) => {
+        if (rawAyah.translation.toLowerCase().includes(lowerQuery)) {
+          const ayah = transformAyah(surahId, index + 1, rawAyah);
+          matchedAyahs.push({
+            ...ayah,
+            surahNumber: surahId,
+            surahName: surahMeta?.name_arabic || "Unknown",
+            surahEnglishName: surahMeta?.name || "Unknown",
+          });
+        }
+      });
     });
 
     // Paginate results
-    const total = enrichedResults.length;
+    const total = matchedAyahs.length;
     const total_pages = Math.ceil(total / limit);
     const startIndex = (page - 1) * limit;
     const endIndex = startIndex + limit;
 
-    const results = enrichedResults.slice(startIndex, endIndex);
+    const results = matchedAyahs.slice(startIndex, endIndex);
 
     return {
       results,
@@ -181,12 +205,16 @@ export const QuranService = {
     page: number;
     total_pages: number;
   } => {
-    const data = loadQuranData();
-    const surah = data.surahs.find((s) => s.id === surahId);
+    const metadata = loadSurahMetadata();
+    const data = loadQuranDataAll();
 
-    const ayahs = data.ayahs
-      .filter((a) => a.surah_id === surahId)
-      .map(transformAyah);
+    const surahMeta = metadata.find((s) => s.id === surahId);
+    const rawAyahs = data[surahId.toString()] || [];
+
+    const ayahs = rawAyahs.map((rawAyah, index) =>
+      transformAyah(surahId, index + 1, rawAyah),
+    );
+
     const total = ayahs.length;
     const total_pages = Math.ceil(total / limit);
 
@@ -194,7 +222,7 @@ export const QuranService = {
     const endIndex = startIndex + limit;
 
     return {
-      surah: surah ? transformSurah(surah) : null,
+      surah: surahMeta ? transformSurah(surahMeta) : null,
       ayahs: ayahs.slice(startIndex, endIndex),
       total,
       page,
@@ -206,21 +234,33 @@ export const QuranService = {
    * Get specific ayah
    */
   getAyah: (surahId: number, ayahNumber: number): Ayah | null => {
-    const data = loadQuranData();
-    const ayah = data.ayahs.find(
-      (a) => a.surah_id === surahId && a.ayah_number === ayahNumber,
-    );
-    return ayah ? transformAyah(ayah) : null;
+    const data = loadQuranDataAll();
+    const rawAyahs = data[surahId.toString()];
+
+    if (!rawAyahs || ayahNumber < 1 || ayahNumber > rawAyahs.length) {
+      return null;
+    }
+
+    const rawAyah = rawAyahs[ayahNumber - 1];
+    return transformAyah(surahId, ayahNumber, rawAyah);
   },
 
   /**
    * Get cache status
    */
   getCacheStatus: () => {
+    const metadata = loadSurahMetadata();
+    const data = loadQuranDataAll();
+
+    let totalAyahs = 0;
+    Object.values(data).forEach((ayahs) => {
+      totalAyahs += ayahs.length;
+    });
+
     return {
-      cached: quranData !== null,
-      total_surahs: quranData?.surahs.length || 0,
-      total_ayahs: quranData?.ayahs.length || 0,
+      cached: quranDataAll !== null,
+      total_surahs: metadata.length,
+      total_ayahs: totalAyahs,
       last_load_time: new Date(lastLoadTime).toISOString(),
     };
   },
