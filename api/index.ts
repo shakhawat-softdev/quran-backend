@@ -67,19 +67,7 @@ export default async (req: any, res: any): Promise<void> => {
       (req.headers["x-forwarded-host"] as string) ||
       (req.headers.host as string) ||
       "localhost";
-
-    // Get the pathname from the URL
-    let pathname = req.url || "/";
-    console.log(`[Handler] Original pathname: ${pathname}`);
-
-    // If pathname doesn't start with /api, ensure it's included for route matching
-    if (!pathname.startsWith("/api")) {
-      pathname = `/api${pathname}`;
-    }
-    console.log(`[Handler] Adjusted pathname: ${pathname}`);
-
-    const url = new URL(pathname, `${protocol}://${host}`);
-    console.log(`[Handler] Full URL: ${url.toString()}`);
+    const url = new URL(req.url || "/", `${protocol}://${host}`);
 
     const request = new Request(url.toString(), {
       method: req.method,
@@ -88,11 +76,7 @@ export default async (req: any, res: any): Promise<void> => {
         req.method !== "GET" && req.method !== "HEAD" ? req.body : undefined,
     });
 
-    console.log(
-      `[Handler] Invoking app.fetch with method: ${req.method}, path: ${pathname}`,
-    );
     const response = await app.fetch(request);
-    console.log(`[Handler] Response status: ${response.status}`);
 
     res.status(response.status);
     response.headers.forEach((value: string, key: string) => {
@@ -102,7 +86,7 @@ export default async (req: any, res: any): Promise<void> => {
     const text = await response.text();
     res.end(text);
   } catch (error) {
-    console.error("[Handler] Error:", error);
+    console.error("Handler error:", error);
     res.status(500).json({
       success: false,
       error: "Internal Server Error",
