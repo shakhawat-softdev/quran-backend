@@ -1,4 +1,5 @@
 import { Hono } from "hono";
+import type { VercelRequest, VercelResponse } from "@vercel/node";
 import {
   errorHandler,
   requestLogger,
@@ -60,32 +61,32 @@ app.notFound((c) => {
 });
 
 // Export default handler for Vercel
-export default async (req, res) => {
+export default async (
+  req: VercelRequest,
+  res: VercelResponse,
+): Promise<void> => {
   try {
-    // Build full URL from request
-    const protocol = req.headers["x-forwarded-proto"] || "https";
+    const protocol = (req.headers["x-forwarded-proto"] as string) || "https";
     const host =
-      req.headers["x-forwarded-host"] || req.headers.host || "localhost";
+      (req.headers["x-forwarded-host"] as string) ||
+      (req.headers.host as string) ||
+      "localhost";
     const url = new URL(req.url || "/", `${protocol}://${host}`);
 
-    // Create Request object
     const request = new Request(url.toString(), {
       method: req.method,
-      headers: req.headers,
+      headers: req.headers as HeadersInit,
       body:
         req.method !== "GET" && req.method !== "HEAD" ? req.body : undefined,
     });
 
-    // Handle the request
     const response = await app.fetch(request);
 
-    // Set response headers
     res.status(response.status);
     response.headers.forEach((value, key) => {
       res.setHeader(key, value);
     });
 
-    // Send response body
     const text = await response.text();
     res.end(text);
   } catch (error) {
