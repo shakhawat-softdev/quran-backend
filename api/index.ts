@@ -1,18 +1,17 @@
 import { Hono } from "hono";
-import { serve } from "@hono/node-server";
+import { handle } from "hono/vercel";
 import {
   errorHandler,
   requestLogger,
   corsMiddleware,
   createRateLimiter,
   cacheControl,
-} from "./middleware/index.js";
-import quranRoutes from "./routes/quran.routes.js";
+} from "../dist/middleware/index.js";
+import quranRoutes from "../dist/routes/quran.routes.js";
 
-// Export for use in different environments
-export const app = new Hono();
+const app = new Hono();
 
-// Global middleware - must be added before routes
+// Global middleware
 app.use(errorHandler);
 app.use(requestLogger);
 app.use(corsMiddleware);
@@ -42,7 +41,7 @@ app.get("/", (c) => {
 // API v1 routes
 app.route("/api/v1", quranRoutes);
 
-// Backward compatibility without version
+// Backward compatibility without version prefix
 app.route("/api", quranRoutes);
 
 // 404 handler
@@ -61,15 +60,4 @@ app.notFound((c) => {
   );
 });
 
-// Start server only in local development (not in serverless)
-if (process.env.NODE_ENV !== "production") {
-  const port = parseInt(process.env.PORT || "3000", 10);
-
-  serve({
-    fetch: app.fetch,
-    port,
-  });
-
-  console.log(`🚀 Quran API running on http://localhost:${port}`);
-  console.log(`📖 Available at http://localhost:${port}`);
-}
+export default handle(app);
