@@ -1,0 +1,1080 @@
+{
+  "surahs": [
+    {
+      "id": 1,
+      "name": "Al-Fatiha",
+      "name_arabic": "الفاتحة",
+      "total_ayahs": 7,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 2,
+      "name": "Al-Baqarah",
+      "name_arabic": "البقرة",
+      "total_ayahs": 286,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 3,
+      "name": "Ali Imran",
+      "name_arabic": "آل عمران",
+      "total_ayahs": 200,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 4,
+      "name": "An-Nisa",
+      "name_arabic": "النساء",
+      "total_ayahs": 176,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 5,
+      "name": "Al-Ma'idah",
+      "name_arabic": "المائدة",
+      "total_ayahs": 120,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 6,
+      "name": "Al-Anam",
+      "name_arabic": "الأنعام",
+      "total_ayahs": 165,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 7,
+      "name": "Al-Araf",
+      "name_arabic": "الأعراف",
+      "total_ayahs": 206,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 8,
+      "name": "Al-Anfal",
+      "name_arabic": "الأنفال",
+      "total_ayahs": 75,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 9,
+      "name": "At-Tawbah",
+      "name_arabic": "التوبة",
+      "total_ayahs": 129,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 10,
+      "name": "Yunus",
+      "name_arabic": "يونس",
+      "total_ayahs": 109,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 11,
+      "name": "Hud",
+      "name_arabic": "هود",
+      "total_ayahs": 123,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 12,
+      "name": "Yusuf",
+      "name_arabic": "يوسف",
+      "total_ayahs": 111,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 13,
+      "name": "Ar-Ra'd",
+      "name_arabic": "الرعد",
+      "total_ayahs": 43,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 14,
+      "name": "Ibrahim",
+      "name_arabic": "إبراهيم",
+      "total_ayahs": 52,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 15,
+      "name": "Al-Hijr",
+      "name_arabic": "الحجر",
+      "total_ayahs": 99,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 16,
+      "name": "An-Nahl",
+      "name_arabic": "النحل",
+      "total_ayahs": 128,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 17,
+      "name": "Al-Isra",
+      "name_arabic": "الإسراء",
+      "total_ayahs": 111,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 18,
+      "name": "Al-Kahf",
+      "name_arabic": "الكهف",
+      "total_ayahs": 110,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 19,
+      "name": "Maryam",
+      "name_arabic": "مريم",
+      "total_ayahs": 98,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 20,
+      "name": "Ta-Ha",
+      "name_arabic": "طه",
+      "total_ayahs": 135,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 21,
+      "name": "Al-Anbiya",
+      "name_arabic": "الأنبياء",
+      "total_ayahs": 112,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 22,
+      "name": "Al-Hajj",
+      "name_arabic": "الحج",
+      "total_ayahs": 78,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 23,
+      "name": "Al-Mu'minun",
+      "name_arabic": "المؤمنون",
+      "total_ayahs": 118,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 24,
+      "name": "An-Nur",
+      "name_arabic": "النور",
+      "total_ayahs": 64,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 25,
+      "name": "Al-Furqan",
+      "name_arabic": "الفرقان",
+      "total_ayahs": 77,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 26,
+      "name": "Ash-Shu'ara",
+      "name_arabic": "الشعراء",
+      "total_ayahs": 227,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 27,
+      "name": "An-Naml",
+      "name_arabic": "النمل",
+      "total_ayahs": 93,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 28,
+      "name": "Al-Qasas",
+      "name_arabic": "القصص",
+      "total_ayahs": 88,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 29,
+      "name": "Al-Ankabut",
+      "name_arabic": "العنكبوت",
+      "total_ayahs": 69,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 30,
+      "name": "Ar-Rum",
+      "name_arabic": "الروم",
+      "total_ayahs": 60,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 31,
+      "name": "Luqman",
+      "name_arabic": "لقمان",
+      "total_ayahs": 34,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 32,
+      "name": "As-Sajdah",
+      "name_arabic": "السجدة",
+      "total_ayahs": 30,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 33,
+      "name": "Al-Ahzab",
+      "name_arabic": "الأحزاب",
+      "total_ayahs": 73,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 34,
+      "name": "Saba",
+      "name_arabic": "سبأ",
+      "total_ayahs": 54,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 35,
+      "name": "Fatir",
+      "name_arabic": "فاطر",
+      "total_ayahs": 45,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 36,
+      "name": "Ya-Sin",
+      "name_arabic": "يس",
+      "total_ayahs": 83,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 37,
+      "name": "As-Saffat",
+      "name_arabic": "الصافات",
+      "total_ayahs": 182,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 38,
+      "name": "Sad",
+      "name_arabic": "ص",
+      "total_ayahs": 88,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 39,
+      "name": "Az-Zumar",
+      "name_arabic": "الزمر",
+      "total_ayahs": 75,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 40,
+      "name": "Ghafir",
+      "name_arabic": "غافر",
+      "total_ayahs": 85,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 41,
+      "name": "Fussilat",
+      "name_arabic": "فصلت",
+      "total_ayahs": 54,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 42,
+      "name": "Ash-Shura",
+      "name_arabic": "الشورى",
+      "total_ayahs": 53,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 43,
+      "name": "Az-Zukhruf",
+      "name_arabic": "الزخرف",
+      "total_ayahs": 89,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 44,
+      "name": "Ad-Dukhan",
+      "name_arabic": "الدخان",
+      "total_ayahs": 59,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 45,
+      "name": "Al-Jathiyah",
+      "name_arabic": "الجاثية",
+      "total_ayahs": 37,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 46,
+      "name": "Al-Ahqaf",
+      "name_arabic": "الأحقاف",
+      "total_ayahs": 35,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 47,
+      "name": "Muhammad",
+      "name_arabic": "محمد",
+      "total_ayahs": 38,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 48,
+      "name": "Al-Fath",
+      "name_arabic": "الفتح",
+      "total_ayahs": 29,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 49,
+      "name": "Al-Hujurat",
+      "name_arabic": "الحجرات",
+      "total_ayahs": 18,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 50,
+      "name": "Qaf",
+      "name_arabic": "ق",
+      "total_ayahs": 45,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 51,
+      "name": "Ad-Dhariyat",
+      "name_arabic": "الذاريات",
+      "total_ayahs": 60,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 52,
+      "name": "At-Tur",
+      "name_arabic": "الطور",
+      "total_ayahs": 49,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 53,
+      "name": "An-Najm",
+      "name_arabic": "النجم",
+      "total_ayahs": 62,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 54,
+      "name": "Al-Qamar",
+      "name_arabic": "القمر",
+      "total_ayahs": 55,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 55,
+      "name": "Ar-Rahman",
+      "name_arabic": "الرحمن",
+      "total_ayahs": 78,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 56,
+      "name": "Al-Waqi'ah",
+      "name_arabic": "الواقعة",
+      "total_ayahs": 96,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 57,
+      "name": "Al-Hadid",
+      "name_arabic": "الحديد",
+      "total_ayahs": 29,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 58,
+      "name": "Al-Mujadilah",
+      "name_arabic": "المجادلة",
+      "total_ayahs": 22,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 59,
+      "name": "Al-Hashr",
+      "name_arabic": "الحشر",
+      "total_ayahs": 24,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 60,
+      "name": "Al-Mumtahina",
+      "name_arabic": "الممتحنة",
+      "total_ayahs": 13,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 61,
+      "name": "As-Saff",
+      "name_arabic": "الصف",
+      "total_ayahs": 14,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 62,
+      "name": "Al-Jumu'ah",
+      "name_arabic": "الجمعة",
+      "total_ayahs": 11,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 63,
+      "name": "Al-Munafiqun",
+      "name_arabic": "المنافقون",
+      "total_ayahs": 11,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 64,
+      "name": "At-Taghabun",
+      "name_arabic": "التغابن",
+      "total_ayahs": 18,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 65,
+      "name": "At-Talaq",
+      "name_arabic": "الطلاق",
+      "total_ayahs": 12,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 66,
+      "name": "At-Tahrim",
+      "name_arabic": "التحريم",
+      "total_ayahs": 12,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 67,
+      "name": "Al-Mulk",
+      "name_arabic": "الملك",
+      "total_ayahs": 30,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 68,
+      "name": "Al-Qalam",
+      "name_arabic": "القلم",
+      "total_ayahs": 52,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 69,
+      "name": "Al-Haqqah",
+      "name_arabic": "الحاقة",
+      "total_ayahs": 52,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 70,
+      "name": "Al-Ma'arij",
+      "name_arabic": "المعارج",
+      "total_ayahs": 44,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 71,
+      "name": "Nuh",
+      "name_arabic": "نوح",
+      "total_ayahs": 28,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 72,
+      "name": "Al-Jinn",
+      "name_arabic": "الجن",
+      "total_ayahs": 28,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 73,
+      "name": "Al-Muzzammil",
+      "name_arabic": "المزمل",
+      "total_ayahs": 20,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 74,
+      "name": "Al-Muddaththir",
+      "name_arabic": "المدثر",
+      "total_ayahs": 56,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 75,
+      "name": "Al-Qiyamah",
+      "name_arabic": "القيامة",
+      "total_ayahs": 40,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 76,
+      "name": "Al-Insan",
+      "name_arabic": "الإنسان",
+      "total_ayahs": 31,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 77,
+      "name": "Al-Mursalat",
+      "name_arabic": "المرسلات",
+      "total_ayahs": 50,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 78,
+      "name": "An-Naba",
+      "name_arabic": "النبأ",
+      "total_ayahs": 40,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 79,
+      "name": "An-Nazi'at",
+      "name_arabic": "الناعات",
+      "total_ayahs": 46,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 80,
+      "name": "Abasa",
+      "name_arabic": "عبس",
+      "total_ayahs": 42,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 81,
+      "name": "At-Takwir",
+      "name_arabic": "التكوير",
+      "total_ayahs": 29,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 82,
+      "name": "Al-Infitar",
+      "name_arabic": "الانفطار",
+      "total_ayahs": 19,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 83,
+      "name": "Al-Mutaffifin",
+      "name_arabic": "المطففين",
+      "total_ayahs": 36,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 84,
+      "name": "Al-Inshiqaq",
+      "name_arabic": "الانشقاق",
+      "total_ayahs": 25,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 85,
+      "name": "Al-Buruj",
+      "name_arabic": "البروج",
+      "total_ayahs": 22,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 86,
+      "name": "At-Tariq",
+      "name_arabic": "الطارق",
+      "total_ayahs": 17,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 87,
+      "name": "Al-A'la",
+      "name_arabic": "الأعلى",
+      "total_ayahs": 19,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 88,
+      "name": "Al-Ghashiyah",
+      "name_arabic": "الغاشية",
+      "total_ayahs": 26,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 89,
+      "name": "Al-Fajr",
+      "name_arabic": "الفجر",
+      "total_ayahs": 30,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 90,
+      "name": "Al-Balad",
+      "name_arabic": "البلد",
+      "total_ayahs": 20,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 91,
+      "name": "Ash-Shams",
+      "name_arabic": "الشمس",
+      "total_ayahs": 15,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 92,
+      "name": "Al-Layl",
+      "name_arabic": "الليل",
+      "total_ayahs": 21,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 93,
+      "name": "Ad-Duha",
+      "name_arabic": "الضحى",
+      "total_ayahs": 11,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 94,
+      "name": "Ash-Sharh",
+      "name_arabic": "الشرح",
+      "total_ayahs": 8,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 95,
+      "name": "At-Tin",
+      "name_arabic": "التين",
+      "total_ayahs": 8,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 96,
+      "name": "Al-Alaq",
+      "name_arabic": "العلق",
+      "total_ayahs": 19,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 97,
+      "name": "Al-Qadr",
+      "name_arabic": "القدر",
+      "total_ayahs": 5,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 98,
+      "name": "Al-Bayyinah",
+      "name_arabic": "البينة",
+      "total_ayahs": 8,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 99,
+      "name": "Az-Zilzal",
+      "name_arabic": "الزلزلة",
+      "total_ayahs": 8,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 100,
+      "name": "Al-Adiyat",
+      "name_arabic": "العاديات",
+      "total_ayahs": 11,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 101,
+      "name": "Al-Qari'ah",
+      "name_arabic": "القارعة",
+      "total_ayahs": 11,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 102,
+      "name": "At-Takathur",
+      "name_arabic": "التكاثر",
+      "total_ayahs": 8,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 103,
+      "name": "Al-Asr",
+      "name_arabic": "العصر",
+      "total_ayahs": 3,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 104,
+      "name": "Al-Humazah",
+      "name_arabic": "الهمزة",
+      "total_ayahs": 9,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 105,
+      "name": "Al-Fil",
+      "name_arabic": "الفيل",
+      "total_ayahs": 5,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 106,
+      "name": "Quraish",
+      "name_arabic": "قريش",
+      "total_ayahs": 4,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 107,
+      "name": "Al-Ma'un",
+      "name_arabic": "الماعون",
+      "total_ayahs": 7,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 108,
+      "name": "Al-Kawthar",
+      "name_arabic": "الكوثر",
+      "total_ayahs": 3,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 109,
+      "name": "Al-Kafirun",
+      "name_arabic": "الكافرون",
+      "total_ayahs": 6,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 110,
+      "name": "An-Nasr",
+      "name_arabic": "النصر",
+      "total_ayahs": 3,
+      "revelation_type": "Medinan"
+    },
+    {
+      "id": 111,
+      "name": "Al-Masad",
+      "name_arabic": "المسد",
+      "total_ayahs": 5,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 112,
+      "name": "Al-Ikhlas",
+      "name_arabic": "الإخلاص",
+      "total_ayahs": 4,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 113,
+      "name": "Al-Falaq",
+      "name_arabic": "الفلق",
+      "total_ayahs": 5,
+      "revelation_type": "Meccan"
+    },
+    {
+      "id": 114,
+      "name": "An-Nas",
+      "name_arabic": "الناس",
+      "total_ayahs": 6,
+      "revelation_type": "Meccan"
+    }
+  ],
+  "ayahs": [
+    {
+      "surah_id": 1,
+      "ayah_number": 1,
+      "arabic_text": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+      "translation": "In the name of Allah, the Most Gracious, the Most Merciful"
+    },
+    {
+      "surah_id": 1,
+      "ayah_number": 2,
+      "arabic_text": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+      "translation": "All praise is for Allah, Lord of all worlds"
+    },
+    {
+      "surah_id": 1,
+      "ayah_number": 3,
+      "arabic_text": "الرَّحْمَٰنِ الرَّحِيمِ",
+      "translation": "The Most Gracious, the Most Merciful"
+    },
+    {
+      "surah_id": 1,
+      "ayah_number": 4,
+      "arabic_text": "مَالِكِ يَوْمِ الدِّينِ",
+      "translation": "Master of the Day of Judgment"
+    },
+    {
+      "surah_id": 1,
+      "ayah_number": 5,
+      "arabic_text": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+      "translation": "You alone we worship, and You alone we seek help from"
+    },
+    {
+      "surah_id": 1,
+      "ayah_number": 6,
+      "arabic_text": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+      "translation": "Guide us to the straight path"
+    },
+    {
+      "surah_id": 1,
+      "ayah_number": 7,
+      "arabic_text": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+      "translation": "The path of those whom You have blessed, not of those who incur Your anger, nor of those who go astray"
+    },
+    {
+      "surah_id": 2,
+      "ayah_number": 1,
+      "arabic_text": "الم",
+      "translation": "Alif Lam Meem"
+    },
+    {
+      "surah_id": 2,
+      "ayah_number": 2,
+      "arabic_text": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ",
+      "translation": "This is the Book in which there is no doubt, a guidance for those who are pious"
+    },
+    {
+      "surah_id": 2,
+      "ayah_number": 3,
+      "arabic_text": "الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ",
+      "translation": "Those who believe in the unseen, establish prayer, and give from what We have provided them"
+    },
+    {
+      "surah_id": 2,
+      "ayah_number": 4,
+      "arabic_text": "وَالَّذِينَ يُؤْمِنُونَ بِمَا أُنزِلَ إِلَيْكَ وَمَا أُنزِلَ مِن قَبْلِكَ وَبِالْآخِرَةِ هُمْ يُوقِنُونَ",
+      "translation": "And those who believe in what has been revealed to you and what was revealed before you, and they are certain of the afterlife"
+    },
+    {
+      "surah_id": 2,
+      "ayah_number": 5,
+      "arabic_text": "أُولَٰئِكَ عَلَىٰ هُدًى مِّن رَّبِّهِمْ ۖ وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ",
+      "translation": "Those are upon guidance from their Lord, and those are the successful"
+    },
+    {
+      "surah_id": 2,
+      "ayah_number": 6,
+      "arabic_text": "إِنَّ الَّذِينَ كَفَرُوا سَوَاءٌ عَلَيْهِمْ أَأَنذَرْتَهُمْ أَمْ لَمْ تُنذِرْهُمْ لَا يُؤْمِنُونَ",
+      "translation": "Indeed, those who have disbelieved - it is all the same for them whether you warn them or do not warn them - they will not believe"
+    },
+    {
+      "surah_id": 3,
+      "ayah_number": 1,
+      "arabic_text": "الم",
+      "translation": "Alif Lam Meem"
+    },
+    {
+      "surah_id": 3,
+      "ayah_number": 2,
+      "arabic_text": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ",
+      "translation": "Allah - there is no deity except Him, the Ever-Living, the Sustainer of existence"
+    },
+    {
+      "surah_id": 3,
+      "ayah_number": 3,
+      "arabic_text": "نَزَّلَ عَلَيْكَ الْكِتَابَ بِالْحَقِّ مُصَدِّقًا لِّمَا بَيْنَ يَدَيْهِ وَأَنزَلَ التَّوْرَاةَ وَالْإِنجِيلَ",
+      "translation": "He has sent down to you the Book in truth, confirming what was before it. And He revealed the Torah and the Gospel"
+    },
+    {
+      "surah_id": 3,
+      "ayah_number": 4,
+      "arabic_text": "مِن قَبْلُ هُدًى لِّلنَّاسِ وَأَنزَلَ الْفُرْقَانَ ۗ إِنَّ الَّذِينَ كَفَرُوا بِآيَاتِ اللَّهِ لَهُمْ عَذَابٌ شَدِيدٌ ۗ وَاللَّهُ عَزِيزٌ ذُو انتِقَامٍ",
+      "translation": "previously as guidance for people. And He revealed the Qur'an. Indeed, those who disbelieve in the signs of Allah will have a severe punishment, and Allah is Exalted in Might, the Owner of Retribution"
+    },
+    {
+      "surah_id": 3,
+      "ayah_number": 5,
+      "arabic_text": "إِنَّ اللَّهَ لَا يَخْفَىٰ عَلَيْهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ",
+      "translation": "Indeed, nothing is hidden from Allah on earth or in the heaven"
+    },
+    {
+      "surah_id": 4,
+      "ayah_number": 1,
+      "arabic_text": "يَا أَيُّهَا النَّاسُ اتَّقُوا رَبَّكُمُ الَّذِي خَلَقَكُم مِّن نَّفْسٍ وَاحِدَةٍ وَخَلَقَ مِنْهَا زَوْجَهَا وَبَثَّ مِنْهُمَا رِجَالًا كَثِيرًا وَنِسَاءً",
+      "translation": "O mankind, fear your Lord, who created you from one soul and created from it its mate and dispersed from both of them many men and women"
+    },
+    {
+      "surah_id": 4,
+      "ayah_number": 2,
+      "arabic_text": "وَاتَّقُوا اللَّهَ الَّذِي تَسَاءَلُونَ بِهِ وَالْأَرْحَامَ ۚ إِنَّ اللَّهَ كَانَ عَلَيْكُمْ رَقِيبًا",
+      "translation": "And fear Allah, by whom you ask one another, and [fear] the wombs. Indeed, Allah is ever, over you, an Observer"
+    },
+    {
+      "surah_id": 4,
+      "ayah_number": 3,
+      "arabic_text": "وَآتُوا الْيَتَامَىٰ أَمْوَالَهُمْ ۖ وَلَا تَتَبَدَّلُوا الْخَبِيثَ بِالطَّيِّبِ ۖ وَلَا تَأْكُلُوا أَمْوَالَهُمْ إِلَىٰ أَمْوَالِكُمْ ۚ إِنَّهُ كَانَ حُوبًا كَبِيرًا",
+      "translation": "And give to the orphans their properties and do not substitute the bad [of your own goods] for the good [of theirs]. And do not consume their properties into your own. Indeed, that is ever a great sin"
+    },
+    {
+      "surah_id": 5,
+      "ayah_number": 1,
+      "arabic_text": "يَا أَيُّهَا الَّذِينَ آمَنُوا أَوْفُوا بِالْعُقُودِ ۚ أُحِلَّتْ لَكُم بَهِيمَةُ الْأَنْعَامِ إِلَّا مَا يُتْلَىٰ عَلَيْكُمْ غَيْرَ مُحِلِّي الصَّيْدِ وَأَنتُمْ حُرُمٌ ۗ إِنَّ اللَّهَ يَحْكُمُ مَا يُرِيدُ",
+      "translation": "O you who have believed, fulfill [all] contracts. Lawful for you are the animals of grazing livestock except for that which is recited to you [in this Qur'an], hunting not being permitted while you are in the state of ihram. Indeed, Allah judges as He intends"
+    },
+    {
+      "surah_id": 5,
+      "ayah_number": 2,
+      "arabic_text": "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُحِلُّوا شَعَائِرَ اللَّهِ وَلَا الشَّهْرَ الْحَرَامَ وَلَا الْهَدْيَ وَلَا الْقَلَائِدَ وَلَا آمِّينَ الْبَيْتَ الْحَرَامَ يَبْتَغُونَ فَضْلًا مِّن رَّبِّهِمْ وَرِضْوَانًا ۚ وَإِذَا حَلَلْتُمْ فَاصْطَادُوا ۚ وَلَا يَجْرِمَنَّكُمْ شَنَآنُ قَوْمٍ أَن صَدُّوكُمْ عَنِ الْمَسْجِدِ الْحَرَامِ أَن تَعْتَدُوا ۘ وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ ۖ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ ۚ وَاتَّقُوا اللَّهَ ۖ إِنَّ اللَّهَ شَدِيدُ الْعِقَابِ",
+      "translation": "O you who have believed, do not violate the rites of Allah or [the sanctity of] the sacred month or [neglect the marking of] the sacrificial animals or [violate the safety of] those coming to the Sacred House seeking bounty from their Lord and [His] approval. But when you come out of ihram, then [you may] hunt. And do not let the hatred of a people for having obstructed you from al-Masjid al-Haram drive you to transgress. And cooperate in righteousness and piety, but do not cooperate in sin and aggression. And fear Allah; indeed, Allah is severe in penalty"
+    },
+    {
+      "surah_id": 6,
+      "ayah_number": 1,
+      "arabic_text": "الْحَمْدُ لِلَّهِ الَّذِي خَلَقَ السَّمَاوَاتِ وَالْأَرْضَ وَجَعَلَ الظُّلُمَاتِ وَالنُّورَ ۖ ثُمَّ الَّذِينَ كَفَرُوا بِرَبِّهِمْ يَعْدِلُونَ",
+      "translation": "All praise is [due] to Allah, who created the heavens and the earth and made the darkness and the light. Yet those who disbelieve equate [in worship] with their Lord others"
+    },
+    {
+      "surah_id": 6,
+      "ayah_number": 2,
+      "arabic_text": "هُوَ الَّذِي خَلَقَكُم مِّن طِينٍ ثُمَّ قَضَىٰ أَجَلًا ۖ وَأَجَلٌ مُّسَمًّى عِندَهُ ۖ ثُمَّ أَنتُمْ تَمْتَرُونَ",
+      "translation": "It is He who created you from clay and then determined a [your] term and a specified time [known] to Him. Yet you are in dispute"
+    },
+    {
+      "surah_id": 6,
+      "ayah_number": 3,
+      "arabic_text": "وَهُوَ اللَّهُ فِي السَّمَاوَاتِ وَفِي الْأَرْضِ ۖ يَعْلَمُ سِرَّكُمْ وَعَلَانِيَتَكُمْ وَيَعْلَمُ مَا تَكْسِبُونَ",
+      "translation": "And He is Allah [the only deity] in the heavens and on the earth. He knows your secret [thoughts] and what you make public, and He knows what you earn"
+    },
+    {
+      "surah_id": 7,
+      "ayah_number": 1,
+      "arabic_text": "الم",
+      "translation": "Alif Lam Meem Sad"
+    },
+    {
+      "surah_id": 7,
+      "ayah_number": 2,
+      "arabic_text": "كِتَابٌ أُنزِلَ إِلَيْكَ فَلَا يَكُن فِي صَدْرِكَ حَرَجٌ مِّنْهُ لِتُنذِرَ بِهِ وَذِكْرَىٰ لِلْمُؤْمِنِينَ",
+      "translation": "[This is] a Book revealed to you - so let there not be in your breast any uneasiness from it - that you may warn thereby and as a reminder to the believers"
+    },
+    {
+      "surah_id": 7,
+      "ayah_number": 3,
+      "arabic_text": "اتَّبِعُوا مَا أُنزِلَ إِلَيْكُم مِّن رَّبِّكُمْ وَلَا تَتَّبِعُوا مِن دُونِهِ أَوْلِيَاءَ ۚ قَلِيلًا مَّا تَذَكَّرُونَ",
+      "translation": "Follow, [O mankind], what has been revealed to you from your Lord and do not follow other allies besides Him. Little do you remember"
+    },
+    {
+      "surah_id": 8,
+      "ayah_number": 1,
+      "arabic_text": "يَسْأَلُونَكَ عَنِ الْأَنفَالِ ۖ قُلِ الْأَنفَالُ لِلَّهِ وَالرَّسُولِ ۖ فَاتَّقُوا اللَّهَ وَأَصْلِحُوا ذَاتَ بَيْنِكُمْ ۖ وَأَطِيعُوا اللَّهَ وَرَسُولَهُ إِن كُنتُم مُّؤْمِنِينَ",
+      "translation": "They ask you, [O Muhammad], about the spoils of war. Say, 'The [decision concerning] spoils of war belongs to Allah and the Messenger.' So fear Allah and amend that which is between you and obey Allah and His Messenger, if you should be believers"
+    },
+    {
+      "surah_id": 8,
+      "ayah_number": 2,
+      "arabic_text": "إِنَّمَا الْمُؤْمِنُونَ الَّذِينَ إِذَا ذُكِرَ اللَّهُ وَجِلَتْ قُلُوبُهُمْ وَإِذَا تُلِيَتْ عَلَيْهِمْ آيَاتُهُ زَادَتْهُمْ إِيمَانًا وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ",
+      "translation": "The believers are only those who, when Allah is mentioned, their hearts become fearful, and when His verses are recited to them, it increases them in faith; and upon their Lord they rely"
+    },
+    {
+      "surah_id": 9,
+      "ayah_number": 1,
+      "arabic_text": "بَرَاءَةٌ مِّنَ اللَّهِ وَرَسُولِهِ إِلَى الَّذِينَ عَاهَدتُّم مِّنَ الْمُشْرِكِينَ",
+      "translation": "[This is a declaration of] disassociation, from Allah and His Messenger, to those with whom you had made a treaty among the polytheists"
+    },
+    {
+      "surah_id": 9,
+      "ayah_number": 2,
+      "arabic_text": "فَسِيحُوا فِي الْأَرْضِ أَرْبَعَةَ أَشْهُرٍ وَاعْلَمُوا أَنَّكُمْ غَيْرُ مُعْجِزِي اللَّهِ وَأَنَّ اللَّهَ مُخْزِي الْكَافِرِينَ",
+      "translation": "So travel freely, [O disbelievers], throughout the land [during] four months but know that you cannot escape Allah and that Allah will disgrace the disbelievers"
+    },
+    {
+      "surah_id": 9,
+      "ayah_number": 3,
+      "arabic_text": "وَأَذَانٌ مِّنَ اللَّهِ وَرَسُولِهِ إِلَى النَّاسِ يَوْمَ الْحَجِّ الْأَكْبَرِ أَنَّ اللَّهَ بَرِيءٌ مِّنَ الْمُشْرِكِينَ وَرَسُولُهُ ۚ فَإِن تُبْتُمْ فَهُوَ خَيْرٌ لَّكُمْ ۖ وَإِن تَوَلَّيْتُمْ فَاعْلَمُوا أَنَّكُمْ غَيْرُ مُعْجِزِي اللَّهِ ۗ وَبَشِّرِ الَّذِينَ كَفَرُوا بِعَذَابٍ أَلِيمٍ",
+      "translation": "And [this is] an announcement from Allah and His Messenger to the people on the day of the greater pilgrimage that Allah is disassociated from the disbelievers, and [so is] His Messenger. So if you repent, that is better for you; but if you turn away - then know that you will not cause failure to Allah. And give tidings to those who disbelieve of a painful punishment"
+    },
+    {
+      "surah_id": 10,
+      "ayah_number": 1,
+      "arabic_text": "الر ۚ تِلْكَ آيَاتُ الْكِتَابِ الْحَكِيمِ",
+      "translation": "Alif, Lam, Ra. These are the verses of the wise Book"
+    },
+    {
+      "surah_id": 10,
+      "ayah_number": 2,
+      "arabic_text": "أَكَانَ لِلنَّاسِ عَجَبًا أَن أَوْحَيْنَا إِلَىٰ رَجُلٍ مِّنْهُمْ أَنْ أَنذِرِ النَّاسَ وَبَشِّرِ الَّذِينَ آمَنُوا أَنَّ لَهُمْ قَدَمَ صِدْقٍ عِندَ رَبِّهِمْ ۗ قَالَ الْكَافِرُونَ إِنَّ هَٰذَا لَسَاحِرٌ مُّبِينٌ",
+      "translation": "Is it a wonder to the people that We revealed to a man from among them, [saying], 'Warn mankind and give good tidings to those who believe that they will have a firm footing with their Lord?' The disbelievers said, 'Indeed, this is a clear magician'"
+    },
+    {
+      "surah_id": 10,
+      "ayah_number": 3,
+      "arabic_text": "إِنَّ رَبَّكُمُ اللَّهُ الَّذِي خَلَقَ السَّمَاوَاتِ وَالْأَرْضَ فِي سِتَّةِ أَيَّامٍ ثُمَّ اسْتَوَىٰ عَلَى الْعَرْشِ يُدَبِّرُ الْأَمْرَ ۚ مَا مِن شَفِيعٍ إِلَّا مِن بَعْدِ إِذْنِهِ ۚ ذَٰلِكُمُ اللَّهُ رَبُّكُمْ فَاعْبُدُوهُ ۚ أَفَلَا تَذَكَّرُونَ",
+      "translation": "Indeed, your Lord is Allah, who created the heavens and the earth in six days and then established Himself above the Throne, arranging the matter [of His creation]. There is no intercessor except after His permission. That is Allah, your Lord, so worship Him. Then, will you not remember?"
+    },
+    {
+      "surah_id": 36,
+      "ayah_number": 1,
+      "arabic_text": "يس",
+      "translation": "Ya Seen"
+    },
+    {
+      "surah_id": 36,
+      "ayah_number": 2,
+      "arabic_text": "وَالْقُرْآنِ الْحَكِيمِ",
+      "translation": "By the wise Qur'an"
+    },
+    {
+      "surah_id": 36,
+      "ayah_number": 3,
+      "arabic_text": "إِنَّكَ لَمِنَ الْمُرْسَلِينَ",
+      "translation": "Indeed, you are from the messengers"
+    },
+    {
+      "surah_id": 55,
+      "ayah_number": 1,
+      "arabic_text": "الرَّحْمَٰنُ",
+      "translation": "The Most Gracious"
+    },
+    {
+      "surah_id": 55,
+      "ayah_number": 2,
+      "arabic_text": "عَلَّمَ الْقُرْآنَ",
+      "translation": "He taught the Qur'an"
+    },
+    {
+      "surah_id": 112,
+      "ayah_number": 1,
+      "arabic_text": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+      "translation": "Say: He is Allah, the One"
+    },
+    {
+      "surah_id": 112,
+      "ayah_number": 2,
+      "arabic_text": "اللَّهُ الصَّمَدُ",
+      "translation": "Allah is the Eternal and Absolute"
+    },
+    {
+      "surah_id": 112,
+      "ayah_number": 3,
+      "arabic_text": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+      "translation": "He has not fathered anyone nor was He fathered"
+    },
+    {
+      "surah_id": 112,
+      "ayah_number": 4,
+      "arabic_text": "وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+      "translation": "And there is no one comparable to Him"
+    }
+  ]
+}
