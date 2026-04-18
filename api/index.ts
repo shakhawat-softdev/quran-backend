@@ -6,8 +6,8 @@ import {
   corsMiddleware,
   createRateLimiter,
   cacheControl,
-} from "../src/middleware/index.js";
-import quranRoutes from "../src/routes/quran.routes.js";
+} from "../dist/middleware/index.js";
+import quranRoutes from "../dist/routes/quran.routes.js";
 
 const app = new Hono();
 
