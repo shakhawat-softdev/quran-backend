@@ -10,7 +10,6 @@ yarn-error.log*
 .env.local
 .env.*.local
 src
-api
 tsconfig.json
 .prettierrc
 .eslintrc*
@@ -22,3 +21,4 @@ prettier*
 *.test.ts
 .nyc_output
 coverage
+scripts

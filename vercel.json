@@ -1,34 +1,22 @@
 {
   "version": 2,
   "buildCommand": "npm run build",
-  "outputDirectory": ".",
-  "installCommand": "npm ci",
+  "outputDirectory": "dist",
+  "public": false,
   "env": {
     "NODE_ENV": "production"
   },
-  "regions": ["iad1"],
-  "functions": {
-    "api/index.ts": {
-      "runtime": "@vercel/node@3",
-      "memory": 1024,
-      "maxDuration": 30
-    }
-  },
   "headers": [
     {
-      "source": "/api/(.*)",
+      "source": "/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=300, s-maxage=3600"
+          "value": "public, max-age=300"
         },
         {
           "key": "Access-Control-Allow-Origin",
           "value": "*"
-        },
-        {
-          "key": "Access-Control-Allow-Methods",
-          "value": "GET, POST, PUT, DELETE, OPTIONS"
         }
       ]
     }

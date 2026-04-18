@@ -9,6 +9,7 @@ import {
 } from "./middleware/index.js";
 import quranRoutes from "./routes/quran.routes.js";
 
+// Export for use in different environments
 export const app = new Hono();
 
 // Global middleware - must be added before routes
@@ -60,19 +61,14 @@ app.notFound((c) => {
   );
 });
 
-// Export for Vercel
-export default app;
+// Start server
+const port = parseInt(process.env.PORT || "3000", 10);
 
-// Local development server (only runs locally, not on Vercel)
-if (import.meta.url === `file://${process.argv[1]}`) {
-  const port = parseInt(process.env.PORT || "3000");
+serve({
+  fetch: app.fetch,
+  port,
+});
 
-  console.log(`Starting Quran API server on port ${port}...`);
-  serve({
-    fetch: app.fetch,
-    port,
-  });
-
-  console.log(`🚀 Quran API running at http://localhost:${port}`);
-  console.log(`📖 API Documentation available at http://localhost:${port}`);
-}
+console.log(`🚀 Quran API running on http://localhost:${port}`);
+console.log(`📖 Available at http://localhost:${port}`);
+console.log(`Environment: ${process.env.NODE_ENV || "development"}`);
