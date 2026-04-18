@@ -1,5 +1,4 @@
 import { Hono } from "hono";
-import { handle } from "hono/vercel";
 import {
   errorHandler,
   requestLogger,
@@ -60,4 +59,41 @@ app.notFound((c) => {
   );
 });
 
-export default handle(app);
+// Export default handler for Vercel
+export default async (req, res) => {
+  try {
+    // Build full URL from request
+    const protocol = req.headers["x-forwarded-proto"] || "https";
+    const host =
+      req.headers["x-forwarded-host"] || req.headers.host || "localhost";
+    const url = new URL(req.url || "/", `${protocol}://${host}`);
+
+    // Create Request object
+    const request = new Request(url.toString(), {
+      method: req.method,
+      headers: req.headers,
+      body:
+        req.method !== "GET" && req.method !== "HEAD" ? req.body : undefined,
+    });
+
+    // Handle the request
+    const response = await app.fetch(request);
+
+    // Set response headers
+    res.status(response.status);
+    response.headers.forEach((value, key) => {
+      res.setHeader(key, value);
+    });
+
+    // Send response body
+    const text = await response.text();
+    res.end(text);
+  } catch (error) {
+    console.error("Handler error:", error);
+    res.status(500).json({
+      success: false,
+      error: "Internal Server Error",
+      message: error instanceof Error ? error.message : "Unknown error",
+    });
+  }
+};
