@@ -41,25 +41,30 @@ export const requestLogger = async (c: Context, next: Next) => {
  * CORS middleware
  */
 export const corsMiddleware = async (c: Context, next: Next) => {
-  const corsHeaders = {
+  if (c.req.method === "OPTIONS") {
+    return new Response(null, {
+      status: 204,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        "Access-Control-Max-Age": "86400",
+      },
+    });
+  }
+
+  const response = (await next()) as any;
+
+  const headers = {
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type, Authorization",
     "Access-Control-Expose-Headers": "Content-Length, X-Total-Count",
   };
 
-  if (c.req.method === "OPTIONS") {
-    return c.json(null, 204, {
-      ...corsHeaders,
-      "Access-Control-Max-Age": "86400",
-    });
-  }
-
-  const response = (await next()) as any;
-
   // Add CORS headers to response
   if (response && response.headers) {
-    Object.entries(corsHeaders).forEach(([key, value]) => {
+    Object.entries(headers).forEach(([key, value]) => {
       response.headers.set(key, value);
     });
   }

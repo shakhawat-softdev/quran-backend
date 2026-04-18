@@ -37,15 +37,6 @@ app.get("/", (c) => {
   });
 });
 
-// Debug endpoint
-app.get("/debug", (c) => {
-  return c.json({
-    method: c.req.method,
-    path: c.req.path,
-    headers: Object.fromEntries(c.req.raw.headers),
-  });
-});
-
 // API v1 routes
 app.route("/api/v1", quranRoutes);
 
@@ -71,14 +62,29 @@ app.notFound((c) => {
 // Export default handler for Vercel
 export default async (req: any, res: any): Promise<void> => {
   try {
+    // Handle CORS preflight
+    if (req.method === "OPTIONS") {
+      res.status(204);
+      res.setHeader("Access-Control-Allow-Origin", "*");
+      res.setHeader(
+        "Access-Control-Allow-Methods",
+        "GET, POST, PUT, DELETE, OPTIONS",
+      );
+      res.setHeader(
+        "Access-Control-Allow-Headers",
+        "Content-Type, Authorization",
+      );
+      res.setHeader("Access-Control-Max-Age", "86400");
+      res.end();
+      return;
+    }
+
     const protocol = (req.headers["x-forwarded-proto"] as string) || "https";
     const host =
       (req.headers["x-forwarded-host"] as string) ||
       (req.headers.host as string) ||
       "localhost";
     const url = new URL(req.url || "/", `${protocol}://${host}`);
-
-    console.log(`[${new Date().toISOString()}] ${req.method} ${url.pathname}`);
 
     const request = new Request(url.toString(), {
       method: req.method,
